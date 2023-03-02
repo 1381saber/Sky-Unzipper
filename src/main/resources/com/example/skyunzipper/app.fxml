@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="609.0" style="-fx-background-color: #124851#124851; -fx-background-radius: 12;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.skyunzipper.HelloController">
+    <children>
+        <Button layoutX="20.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#button1" prefHeight="48.0" prefWidth="158.0" style="-fx-background-color: #6da5b2#6da5b2; -fx-background-radius: 16;" text="browse a zip file" textFill="#202728">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        <Button layoutX="20.0" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#button2" prefHeight="48.0" prefWidth="158.0" style="-fx-background-color: #339082#339082; -fx-background-radius: 16;" text="unzip and save" textFill="#203c38">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="609.0" style="-fx-background-color: #80b7cd#80b7cd; -fx-background-radius: 12;" text="Sky File Unzipper" textFill="#32385b">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="18.0" layoutY="483.0" prefHeight="26.0" prefWidth="573.0" style="-fx-background-color: #124851#124851 #124851#124851;" text="Designed by Salam Zojaji Group    " textFill="WHITE">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label fx:id="label" alignment="CENTER" layoutX="-12.0" layoutY="246.0" prefHeight="33.0" prefWidth="222.0" textFill="#54e2ff">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ListView fx:id="list" layoutX="328.0" layoutY="279.0" prefHeight="171.0" prefWidth="256.0" style="-fx-background-radius: 20; -fx-background-color: #6da5b2#6da5b2 #6da5b2#6da5b2 #6da5b2#6da5b2 #6da5b2#6da5b2;" />
+        <Label alignment="CENTER" layoutX="327.0" layoutY="246.0" prefHeight="33.0" prefWidth="262.0" style="-fx-background-color: #a7c6bd#a7c6bd #a7c6bd#a7c6bd; -fx-background-radius: 20;" text="Files list :" textFill="#32385b">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addField" alignment="CENTER" layoutX="372.0" layoutY="143.0" prefHeight="33.0" prefWidth="211.0" promptText="file name to add" style="-fx-background-color: #356864#356864; -fx-background-radius: 20;">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="removeField" alignment="CENTER" layoutX="373.0" layoutY="199.0" prefHeight="33.0" prefWidth="206.0" promptText="file name to remove" style="-fx-background-color: #356864#356864; -fx-background-radius: 20;">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label fx:id="check" alignment="CENTER" layoutX="192.0" layoutY="-58.0" prefHeight="33.0" prefWidth="176.0" textFill="#54e2ff">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="searchField" alignment="CENTER" layoutX="373.0" layoutY="57.0" prefHeight="33.0" prefWidth="211.0" promptText="file name to search" style="-fx-background-color: #356864#356864; -fx-background-radius: 20;">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <ListView fx:id="searchlist" layoutX="325.0" layoutY="98.0" prefHeight="33.0" prefWidth="262.0" style="-fx-background-radius: 20; -fx-background-color: #6da5b2#6da5b2 #6da5b2#6da5b2 #6da5b2#6da5b2 #6da5b2#6da5b2;" />
+      <Button layoutX="328.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#sortDateButton" prefHeight="26.0" prefWidth="106.0" style="-fx-background-radius: 22; -fx-background-color: #a7c6bd#a7c6bd;" text="sort by date" />
+      <Button layoutX="481.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#sortformatButton" prefHeight="26.0" prefWidth="103.0" style="-fx-background-radius: 22; -fx-background-color: #a7c6bd#a7c6bd;" text="sort by format" />
+      <Button layoutX="20.0" layoutY="279.0" mnemonicParsing="false" onMouseClicked="#filter" prefHeight="48.0" prefWidth="158.0" style="-fx-background-color: #6da5b2#6da5b2; -fx-background-radius: 16;" text="category filtering" textFill="#202728">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="193.0" layoutY="336.0">
+         <image>
+            <Image url="@../../../folder(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="193.0" layoutY="392.0">
+         <image>
+            <Image url="@../../../zip.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="44.0" layoutX="328.0" layoutY="57.0" onMouseClicked="#search">
+         <image>
+            <Image url="@../../../search(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="193.0" layoutY="279.0">
+         <image>
+            <Image url="@../../../categories.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="320.0" layoutY="140.0" onMouseClicked="#add">
+         <image>
+            <Image url="@../../../add-file.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="50.0" layoutX="320.0" layoutY="193.0" onMouseClicked="#remove">
+         <image>
+            <Image url="@../../../remove.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="folderPic" fitHeight="136.0" fitWidth="138.0" layoutX="-169.0" layoutY="91.0">
+         <image>
+            <Image url="@../../../open-folder.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="37.0" layoutX="438.0" layoutY="451.0">
+         <image>
+            <Image url="@../../../sort.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="77.0" layoutY="445.0" onMouseClicked="#back1">
+         <image>
+            <Image url="@../../../back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="171.0" layoutY="7.0">
+         <image>
+            <Image url="@../../../rocket.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="done" fitHeight="171.0" fitWidth="169.0" layoutX="-181.0" layoutY="307.0">
+         <image>
+            <Image url="@../../../rocket(1).png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

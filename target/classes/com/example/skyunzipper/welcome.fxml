@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="gif" prefHeight="428.0" prefWidth="573.0" style="-fx-background-color: #124851#124851; -fx-background-radius: 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.skyunzipper.welcomeController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="1.0" prefHeight="56.0" prefWidth="573.0" style="-fx-background-color: #80b7cd#80b7cd;" text=" Sky File Unzipper" textFill="#32385b">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="128.0" layoutY="422.0" prefHeight="0.0" prefWidth="301.0" style="-fx-background-color: #124851#124851 #124851#124851;" text="Designed by Salam Zojaji Group" textFill="WHITE">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+      <ImageView fx:id="hello" fitHeight="115.0" fitWidth="125.0" layoutX="-125.0" layoutY="295.0">
+         <image>
+            <Image url="@../../../hi(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="60.0" layoutX="499.0" layoutY="365.0" onMouseClicked="#contact">
+         <image>
+            <Image url="@../../../contact.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="133.0" fitWidth="154.0" layoutX="211.0" layoutY="63.0">
+         <image>
+            <Image url="@../../../cloud-computing(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="154.0" layoutY="7.0">
+         <image>
+            <Image url="@../../../rocket.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="449.0" layoutY="372.0" onMouseClicked="#github">
+         <image>
+            <Image url="@../../../github(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="115.0" fitWidth="125.0" layoutX="226.0" layoutY="180.0" onMouseClicked="#button1">
+         <image>
+            <Image url="@../../../start-button(2).png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
