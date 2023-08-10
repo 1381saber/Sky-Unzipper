@@ -20,4 +20,4 @@ Prerequisites
     Java Development Kit (JDK) 8 or later
     JavaFX library
 --------------------------------------------------
-
+<img width="592" alt="Screenshot 1402-05-19 at 21 40 29" src="https://github.com/1381saber/Sky-Unzipper/assets/87490751/57c50951-7025-4578-b669-ac11cf3a05fb">
